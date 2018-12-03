@@ -14,15 +14,18 @@ myForm.addEventListener('submit', function(e)
                 var student = JSON.parse(xhr.responseText);
                 document.getElementById("id").innerHTML = "<b>Student ID: </b>" + student.studentID;
                 document.getElementById("name").innerHTML = "<b>Fullname: </b>" + student.fullname;
-                document.getElementById("comment").innerHTML = "<b>Comment: </b>" + student.comment;
+                // document.getElementById("comment").innerHTML = "<b>Comment: </b>" + student.comment;
                 document.getElementById("grade").innerHTML = "<b>Team: </b>" + student.grade;
                 if (student.passed == true) {
                     document.getElementById("noti").innerHTML = "Chúc mừng bạn đã vượt qua thử thách và trở thành thành viên chính thức của CLB F-CODE";
                     document.getElementById("fb").style.display = "";
+                    document.getElementById("pass").className = "alert alert-success";
                 
                 } else{
                     document.getElementById("noti").innerHTML = "Bạn đã không vượt qua thử thách của CLB đưa ra, cảm ơn bạn thời gian qua đã dành thời gian cho CLB.";
                     document.getElementById("fb").style.display = "none";
+                    document.getElementById("pass").className = "alert alert-danger";
+
                 }
 
             } else{
