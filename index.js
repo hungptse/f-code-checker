@@ -14,7 +14,6 @@ myForm.addEventListener('submit', function(e)
                 var student = JSON.parse(xhr.responseText);
                 document.getElementById("id").innerHTML = "<b>Student ID: </b>" + student.studentID;
                 document.getElementById("name").innerHTML = "<b>Fullname: </b>" + student.fullname;
-                // document.getElementById("comment").innerHTML = "<b>Comment: </b>" + student.comment;
                 document.getElementById("grade").innerHTML = "<b>Team: </b>" + student.grade;
                 if (student.passed == true) {
                     document.getElementById("noti").innerHTML = "Chúc mừng bạn đã vượt qua thử thách và trở thành thành viên chính thức của CLB F-CODE";
